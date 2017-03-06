@@ -5,8 +5,6 @@ Transit-Tracker
 
 *A full stack for public transit to transmit gps, calculate stop delays, and host the protocol buffer file to present that to google maps and other applications.*
 
-[TOC]
-
 Wait, what is it?
 -------------
 
