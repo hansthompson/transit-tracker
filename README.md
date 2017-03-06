@@ -16,14 +16,16 @@ How to Deploy
 1. Buy the parts for tracking gps. 
 	* microcomputer (raspberry pi 3) 
 	* usb gps
-	* mobile Internet connection. 
+	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi)
 	* *touch screen interface - TBD*
 
-1. Run the script for turning the gps into an API 
+1. Run the scripts for turning the pi with usb gps into an API
+   * [apt-get stuff](server-scripts/apt-get_repos.sh)
+   * [R stuff](server-scripts/R-packages.sh) 
 2. Build the protocol buffer server on Ubuntu by installing the dependencies
    * [apt-get stuff](server-scripts/apt-get_repos.sh)
-   * R stuff
-   * GTFS of your agency 
+   * [R stuff](server-scripts/R-packages.sh) 
+   * GTFS of your agency - [start here?](https://transit.land/feed-registry/) or [here](http://transitfeeds.com/) 
 3. Start the server
 
 What are the components?
