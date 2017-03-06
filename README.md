@@ -36,7 +36,7 @@ What are the components?
 * [Micro SD card](https://www.amazon.com/Samsung-Select-Memory-MB-ME32DA-AM/dp/B01DOB6Y5Q/ref=sr_1_1?s=pc&ie=UTF8&qid=1488783959&sr=1-1&keywords=micro+sd) - $10.99
 * [usb gps antenna](https://www.amazon.com/Generic-Receiver-G-mouse-Antenna-Navigation/dp/B017BJ3KTU/ref=sr_1_1?s=pc&ie=UTF8&qid=1488784023&sr=8-1&keywords=Generic+USB+GPS+Receiver+G-mouse+GPS+Mouse+Within+GPS+Module+Antenna+for+Car+Laptop+PC+Navigation+Support+Google) - $25.98
 
-### Server
+### Server:
 * Ubuntu server with modest specs (AWS EC2 micro) - [$8.83 - $14.64](https://www.google.com/search?q=aws+micro+cost+month&oq=aws+micro&aqs=chrome.0.69i59l2j69i57.3119j0j1&sourceid=chrome&ie=UTF-8)
 
 Hasn't this been done already? 
