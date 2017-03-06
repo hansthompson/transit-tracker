@@ -17,6 +17,7 @@ How to Deploy
 	* microcomputer (raspberry pi 3) 
 	* usb gps
 	* mobile Internet connection. 
+	* *touch screen interface - TBD*
 
 1. Run the script for turning the gps into an API 
 2. Build the protocol buffer server on Ubuntu by installing the dependencies
@@ -44,6 +45,8 @@ How to contribute
 -------------
 
 Please make an issue and I'll respond.  We can decide to go with the master or a feature branch. 
+
+
 
 
 
