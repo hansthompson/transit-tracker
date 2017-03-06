@@ -19,11 +19,9 @@ How to Deploy
 	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi). In south central Alaska it costs $7.99 per device with a shared 8 gig plan for $59.99. Total: $139.89
 	* *touch screen interface - TBD*
 1. Run the scripts for turning the pi with usb gps into an API
-   * [apt-get stuff](server-scripts/apt-get_repos.sh)
-   * [R stuff](server-scripts/R-packages.sh) 
+   * [shell installation script](server-scripts/setup.sh)
 2. Build the protocol buffer server on Ubuntu by installing the dependencies
-   * [apt-get stuff](server-scripts/apt-get_repos.sh)
-   * [R stuff](server-scripts/R-packages.sh) 
+   * [shell installation script](server-scripts/setup.sh)
    * GTFS of your agency - [start here?](https://transit.land/feed-registry/) or [here](http://transitfeeds.com/) 
 3. Start the server
 
