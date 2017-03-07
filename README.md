@@ -17,6 +17,7 @@ A. Validate the static GTFS
     * Find your agency's GTFS feed ([transitfeeds.com](http://transitfeeds.com/) or [transit land](https://transit.land/feed-registry/))
     
     * Take the URL and run it through the validation process in R's gtfsr package
+    
 ```
 url <- 'http://www.co.fairbanks.ak.us/transportation/MACSDocuments/GTFS.zip'
 
