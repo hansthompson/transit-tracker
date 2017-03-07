@@ -16,3 +16,5 @@ R CMD INSTALL jsonlite_1.3.tar.gz
 R CMD INSTALL httpuv_1.3.3.tar.gz
 sudo su - -c "R -e \"install.packages("/home/pi/plumber", repos = NULL, type='source')\""
 
+sudo apt-get install nginx
+sudo /etc/init.d/nginx start
