@@ -33,11 +33,14 @@ B. Buy the parts for tracking gps.
 	* usb gps
 	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi).
 	* *touch screen interface - TBD*
+	
 C. Run the scripts for turning the pi with usb gps into an API
    * [shell installation script](pi-scripts/setup.sh)
+   
 D. Build the protocol buffer server on Ubuntu by installing the dependencies
    * [shell installation script](server-scripts/setup.sh)
    * GTFS of your agency - [start here?](https://transit.land/feed-registry/) or [here](http://transitfeeds.com/) 
+   
 E. Start the server
 
 What are the components?
