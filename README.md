@@ -37,7 +37,7 @@ What are the components?
 * total: $116.91 per remote unit.
 
 ### Server:
-* Ubuntu server with modest specs (AWS EC2 micro) - [$8.83 - $14.64](https://www.google.com/search?q=aws+micro+cost+month&oq=aws+micro&aqs=chrome.0.69i59l2j69i57.3119j0j1&sourceid=chrome&ie=UTF-8)
+* Ubuntu server with modest specs (AWS EC2 micro) - [$8.83 - $14.64](https://www.google.com/search?q=aws+micro+cost+month&oq=aws+micro&aqs=chrome.0.69i59l2j69i57.3119j0j1&sourceid=chrome&ie=UTF-8) / month
 
 So for 10 devices, on ten buses, it would cost $1169.10 for the up front hardware with a monthly data and hosting cost of $148.72-$154.53 for a 8 gigs shared across devices! 
 
