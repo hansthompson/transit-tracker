@@ -16,7 +16,7 @@ How to Deploy
 1. Buy the parts for tracking gps. 
 	* microcomputer (raspberry pi 3) 
 	* usb gps
-	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi). In south central Alaska it costs $7.99 per device with a shared 8 gig plan for $59.99. Total: $139.89
+	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi).
 	* *touch screen interface - TBD*
 1. Run the scripts for turning the pi with usb gps into an API
    * [shell installation script](pi-scripts/setup.sh)
@@ -33,7 +33,7 @@ What are the components?
 * [Micro SD card](https://www.amazon.com/Samsung-Select-Memory-MB-ME32DA-AM/dp/B01DOB6Y5Q/ref=sr_1_1?s=pc&ie=UTF8&qid=1488783959&sr=1-1&keywords=micro+sd) - $10.99
 * [usb gps antenna](https://www.amazon.com/Generic-Receiver-G-mouse-Antenna-Navigation/dp/B017BJ3KTU/ref=sr_1_1?s=pc&ie=UTF8&qid=1488784023&sr=8-1&keywords=Generic+USB+GPS+Receiver+G-mouse+GPS+Mouse+Within+GPS+Module+Antenna+for+Car+Laptop+PC+Navigation+Support+Google) - $25.98
 * [LTE router](https://www.amazon.com/dp/B00634PLTW/ref=psdc_300189_t1_B01FVJIWCW) - $29.95
-* Carrier modem - $ different across mobile ISPs. 
+* Carrier modem - $ different across mobile ISPs.   In south central Alaska it costs $7.99 per device with a shared 8 gig plan for $59.99. Total: $139.89
 * total: $116.91 per remote unit.
 
 ### Server:
