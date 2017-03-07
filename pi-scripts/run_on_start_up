@@ -1,4 +1,4 @@
 # broadcast IP to GPS collector
 
-# start API
-
+# write coordinates to text file
+while :; do gpsd /dev/ttyUSB0 -N > gpsd_results.txt ; sleep 1; done
