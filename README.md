@@ -32,13 +32,13 @@ url <- 'http://www.co.fairbanks.ak.us/transportation/MACSDocuments/GTFS.zip' # c
 gtfs_obj <- url %>% import_gtfs
 ```
 B. Buy the parts for tracking gps. 
-	* microcomputer (raspberry pi 3) 
+* microcomputer (raspberry pi 3) 
 	
-	* usb gps
+* usb gps
 	
-	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi).
+* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi).
 	
-	* *touch screen interface - TBD*
+* *touch screen interface - TBD*
 	
 C. Run the scripts for turning the pi with usb gps into an API
    * [shell installation script](pi-scripts/setup.sh)
