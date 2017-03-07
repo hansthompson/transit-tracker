@@ -1,4 +1,4 @@
 # Set Dynamic DNS 
-
+hostname -I
 # write coordinates to text file
 while :; do gpsd /dev/ttyUSB0 -N > /var/www/html/gpsd.txt ; sleep 1; done
