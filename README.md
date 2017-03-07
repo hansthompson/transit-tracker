@@ -32,12 +32,14 @@ What are the components?
 * [Raspberry Pi 3 kit](https://www.amazon.com/CanaKit-Raspberry-Clear-Power-Supply/dp/B01C6EQNNK/ref=sr_1_3?s=pc&ie=UTF8&qid=1488783930&sr=1-3&keywords=raspberry+pi+3) - $49.99
 * [Micro SD card](https://www.amazon.com/Samsung-Select-Memory-MB-ME32DA-AM/dp/B01DOB6Y5Q/ref=sr_1_1?s=pc&ie=UTF8&qid=1488783959&sr=1-1&keywords=micro+sd) - $10.99
 * [usb gps antenna](https://www.amazon.com/Generic-Receiver-G-mouse-Antenna-Navigation/dp/B017BJ3KTU/ref=sr_1_1?s=pc&ie=UTF8&qid=1488784023&sr=8-1&keywords=Generic+USB+GPS+Receiver+G-mouse+GPS+Mouse+Within+GPS+Module+Antenna+for+Car+Laptop+PC+Navigation+Support+Google) - $25.98
-* total: $86.96 per remote unit.
+* [LTE router](https://www.amazon.com/dp/B00634PLTW/ref=psdc_300189_t1_B01FVJIWCW) - $29.95
+* Carrier modem - $ different across mobile ISPs. 
+* total: $116.91 per remote unit.
 
 ### Server:
 * Ubuntu server with modest specs (AWS EC2 micro) - [$8.83 - $14.64](https://www.google.com/search?q=aws+micro+cost+month&oq=aws+micro&aqs=chrome.0.69i59l2j69i57.3119j0j1&sourceid=chrome&ie=UTF-8)
 
-So for 10 devices, on ten buses, it would cost $869.60 for the up front hardware with a monthly data and hosting cost of $148.72-$154.53!
+So for 10 devices, on ten buses, it would cost $1169.10 for the up front hardware with a monthly data and hosting cost of $148.72-$154.53!
 
 Hasn't this been done already? 
 -------------
