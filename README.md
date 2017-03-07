@@ -33,8 +33,11 @@ gtfs_obj <- url %>% import_gtfs
 ```
 B. Buy the parts for tracking gps. 
 	* microcomputer (raspberry pi 3) 
+	
 	* usb gps
+	
 	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi).
+	
 	* *touch screen interface - TBD*
 	
 C. Run the scripts for turning the pi with usb gps into an API
