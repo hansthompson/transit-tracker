@@ -12,7 +12,7 @@ A full open source implementation from placing gps hardware on the bus to calcul
 
 How to Deploy
 -------------
-1. Validate the static GTFS 
+A. Validate the static GTFS 
     * Find your agency's GTFS feed ([transitfeeds.com](http://transitfeeds.com/) or [transit land](https://transit.land/feed-registry/))
     * Take the URL and run it through the validation process in R's gtfsr package
 ```
@@ -28,17 +28,17 @@ set_api_key('2ec1ae29-b8c2-4a03-b96e-126d585233f9')
 url <- 'http://www.co.fairbanks.ak.us/transportation/MACSDocuments/GTFS.zip' # change your url here
 gtfs_obj <- url %>% import_gtfs
 ```
-2. Buy the parts for tracking gps. 
+B. Buy the parts for tracking gps. 
 	* microcomputer (raspberry pi 3) 
 	* usb gps
 	* mobile Internet connection. [Mifi general info](https://en.wikipedia.org/wiki/MiFi).
 	* *touch screen interface - TBD*
-1. Run the scripts for turning the pi with usb gps into an API
+C. Run the scripts for turning the pi with usb gps into an API
    * [shell installation script](pi-scripts/setup.sh)
-2. Build the protocol buffer server on Ubuntu by installing the dependencies
+D. Build the protocol buffer server on Ubuntu by installing the dependencies
    * [shell installation script](server-scripts/setup.sh)
    * GTFS of your agency - [start here?](https://transit.land/feed-registry/) or [here](http://transitfeeds.com/) 
-3. Start the server
+E. Start the server
 
 What are the components?
 -------------
