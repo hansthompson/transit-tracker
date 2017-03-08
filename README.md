@@ -74,12 +74,4 @@ Not open source! And not as a bundle for anyone to deploy in one project!
 How to contribute
 -------------
 
-Please make an issue and I'll respond.  We can decide to go with the master or a feature branch. 
-
-
-
-
-
-
-
-
+Please make an issue and I'll respond.  We can decide to go with the master or a feature branch. [check out notes.txt for my current thoughts on what to do](notes.txt) as well as the issues page. 
