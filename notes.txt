@@ -1,12 +1,12 @@
-1. pull gtfs (gtfsr::import_gtfs)
+1. pull gtfs (gtfsr::import_gtfs) *done*
 
-2. validate (gtfsr::import_gtfs)
+2. validate (gtfsr::import_gtfs) *done*
 
-3. turn into an object (gtfsr::import_gtfs)
+3. turn into an object (gtfsr::import_gtfs) *done*
 
-4. filter as an object for the day (hansthompson/gtfsdrilldown)
+4. filter as an object for the day (hansthompson/gtfsdrilldown) *done*
 
-5. take in gps points (to build: pull_gps_points)
+5. take in gps points and make tidy. Have lat, lon, and route. (to build: pull_gps_points)
 
 6. Determine what trip ids from gtfs data and time of day and gps points. (to build: determine_trip_ids)
 
