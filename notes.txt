@@ -1,0 +1,26 @@
+1. pull gtfs (gtfsr::import_gtfs)
+
+2. validate (gtfsr::import_gtfs)
+
+3. turn into an object (gtfsr::import_gtfs)
+
+4. filter as an object for the day (hansthompson/gtfsdrilldown)
+
+5. take in gps points (to build: pull_gps_points)
+
+6. Determine what trip ids from gtfs data and time of day and gps points. (to build: determine_trip_ids)
+
+7. calculate delays (to build: calculate_delays)
+
+8. build protocol buffer (to build: build_protobuf, with help from hansthompson/realtime-bus-api) 
+
+Sooo.... 
+
+	I need to calculate delays given gps points and trip_ids
+
+	I need to calculate delays given the results from determining trip_ids and positions. 
+
+	I need to determine what tidy data looks like for delay information: trip_id, sequence, delay
+
+	I need to build a function that will build the protocol buffer for starters, just the tidy delay information. 
+
