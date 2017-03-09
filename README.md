@@ -46,6 +46,11 @@ C. Run the scripts for turning the pi with usb gps into an API
 D. Build the protocol buffer server on Ubuntu by installing the dependencies
    * [shell installation script](server-scripts/setup.sh)
    * GTFS of your agency - [start here?](https://transit.land/feed-registry/) or [here](http://transitfeeds.com/) 
+   ```
+  	 git clone https://github.com/hansthompson/transit-tracker.git
+	sudo chmod +x /transit-tracker/server-scripts/setup.sh
+	sudo ./transit-tracker/server-scripts/setup.sh
+	```
    
 E. Start the server
 
