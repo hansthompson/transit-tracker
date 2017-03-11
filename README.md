@@ -48,7 +48,7 @@ D. Build the protocol buffer server on Ubuntu by installing the dependencies
 	```
   	git clone https://github.com/hansthompson/transit-tracker.git
 	
-	sudo chmod +x /transit-tracker/server-scripts/setup.sh
+	sudo chmod +x ./transit-tracker/server-scripts/setup.sh
 	
 	sudo ./transit-tracker/server-scripts/setup.sh
 	```
