@@ -55,20 +55,59 @@ gps_data_route_subset_new$primary_id <- paste(trip_ids_for_route, rep(1:n_trips,
 
 x <- inner_join(gtfs_gps_join_prep, gps_data_route_subset_new, by = "primary_id")
 
-# need to write a snippet for finding the lat factor
-x <- x %>% mutate(dist = sqrt((((x$stop_lat - x$lat) * 2)^2)  *   (((x$stop_lon - x$lon))^2))) %>% 
+nearest_stops <- x %>% mutate(dist = sqrt((((x$stop_lat - x$lat) * 2)^2)  *   (((x$stop_lon - x$lon))^2))) %>% 
   group_by(trip_id) %>% 
-  filter(min(dist) == dist) %>% filter(row_number() == 1) %>%
-  select(trip_id, lat, lon, datetime, stop_sequence) %>% ungroup()
-  
-y <- inner_join(x, set_of_stops_in_active_trip_ids, by = "trip_id", "stop_seq")
+  filter(min(dist) == dist) %>% 
+  filter(row_number() == 1) %>%
+  mutate(point_type = "first_nearest")
 
-y %>% 
+second_nearest_stops <- x %>% mutate(dist = sqrt((((x$stop_lat - x$lat) * 2)^2)  *   (((x$stop_lon - x$lon))^2))) %>% 
+  group_by(trip_id) %>% 
+  filter(!min(dist) == dist) %>% 
+  filter(min(dist) == dist) %>% 
+  filter(row_number() == 1) %>%
+  mutate(point_type = "second_nearest")
+
+z <- rbind(nearest_stops, second_nearest_stops)
 
 
+# diff should be == 1 otherwise there is an issue. 
+z %>% ungroup() %>% select(trip_id, stop_sequence, point_type) %>%
+  spread(point_type, stop_sequence) %>% mutate(diff = abs(first_nearest - second_nearest))
 
-# gps time - arrival_time (( gps_A / gps_b ) * Btime - Atime)
+foo <- z %>% group_by(trip_id) %>% filter(min(stop_sequence) == stop_sequence) %>%
+  select(lat, lon, A_lat = stop_lat, A_lon = stop_lon, departure_time, trip_id, datetime, stop_sequence)
 
+elephant <- inner_join(foo %>% select(trip_id, stop_sequence) %>% ungroup(), 
+                       gtfs_today$today_stop_times, 
+                       by = c("trip_id", "stop_sequence")) 
 
+elephant <- inner_join(elephant, gtfs_obj$stops_df , by = "stop_id") %>% 
+  select(trip_id, stop_sequence, arrival_time, stop_id, B_lat = stop_lat, B_lon = stop_lon)
 
-# use this http://gis.stackexchange.com/questions/93332/calculating-distance-scale-factor-by-latitude-for-mercator
+turtle <- inner_join(elephant, foo, by = c("trip_id"))
+
+turtle
+turtle %>% mutate(delay = hms("16:26:00") - hms(departure_time)) %>%
+  mutate(delay2 = sqrt((lat - A_lat) )
+         
+         
+         z               
+         # need to write a snippet for finding the lat factor
+         y <- x %>% mutate(dist = sqrt((((x$stop_lat - x$lat) * 2)^2)  *   (((x$stop_lon - x$lon))^2))) %>% 
+           group_by(trip_id) %>% 
+           filter(min(dist) == dist) %>% filter(row_number() == 1) %>%
+           select(trip_id, lat, lon, datetime, stop_sequence, primary_id) %>% ungroup()
+         
+         inner_join(y %>% , set_of_stops_in_active_trip_ids, by = "trip_id", "stop_seq")
+         
+         y %>% 
+           
+           
+           
+           # gps time - arrival_time (( gps_A / gps_b ) * Btime - Atime)
+           
+           
+           
+           # use this http://gis.stackexchange.com/questions/93332/calculating-distance-scale-factor-by-latitude-for-mercator
+           
