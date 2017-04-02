@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>GTFS Buttons</title>
+  
+<style>
+.butt {
+  font-family: Helvetica, sans-serif;
+   font-weight: 600;
+  background-color: #000000;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px;
+  font-size: 3em;
+  margin-right: 26px;
+  color: #ffffff;
+  padding: 2% 4% 2% 4%;
+  display: inline-block;
+
+}
+
+.butt:hover {
+background-color: #ff0000;
+border-color: #ff0000;
+ font-size: 3.2em;
+  display: inline-block;
+}
+
+
+
+
+#main {
+ 
+  width: 50%;
+  margin: auto;
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  text-align: center;
+
+}
+
+#total {
+
+font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  color: #000000;
+   width: 50%;
+  margin: auto;
+  position: fixed;
+  left: 25%;
+  top: 60%;
+  text-align: center;
+  display: inline-block;
+}
+
+
+</style>
+  <script>
+
+  //
+
+  
+
+//this declares total outside of function
+var total = 0;
+function tallyBikes(bikes){
+  console.log(bikes);
+total +=bikes;
+console.log(total);
+document.getElementById('total').innerHTML = total+" bikes";
+
+
+  };
+
+
+
+
+  </script> 
+
+
+</head>
+
+<body>
+  <div id="main">
+
+    <div class="butt" id ="0" onclick="tallyBikes(0)"> 0 </div> 
+    <div class="butt" id ="1"onclick="tallyBikes(1)"> 1 </div>
+    <div class="butt" id ="2" onclick="tallyBikes(2)"> 2 </div>
+</div>
+
+<div id="total">
+</div>
+ 
+</body>
+</html>
