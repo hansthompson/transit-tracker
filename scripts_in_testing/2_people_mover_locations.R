@@ -5,8 +5,6 @@
 #fake data
 gps_data <- data.frame(route = rep("75", 2), direction = rep(1, 2), lat = c(61.221720, 61.180904), lon = c(-149.733576, -149.822776), datetime = rep(ymd_hms("2017-03-19 10:48:35 AKDT", tz = "AKST"), 2))
 
- 
-
 library(XML)
 
 gps_data <- xmlToList(xmlParse("http://bustracker.muni.org/InfoPoint/XML/vehiclelocation.xml")) 
