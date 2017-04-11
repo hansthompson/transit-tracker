@@ -1,6 +1,6 @@
 library(gtfsdrilldown);library(dplyr);library(lubridate);library(tidyr);library(leaflet) 
 # use the gps and gtfs to find which possible trip ids, then assign them based on some logic. Ends up with a object of trip_ids with gps "id".
-calculate_delays <- function(my_gps_data, gtfs_today, gtfs_obj, lat_factor) {
+calculate_delays <- function(my_gps_data, gtfs_today, lat_factor) {
   all_delays <- data.frame()
   for(i in unique(tidy_gps_obj$route))  {
     for(j in unique(tidy_gps_obj$direction)) {
