@@ -27,9 +27,9 @@ calculate_delays <- function(my_gps_data, gtfs_today, gtfs_obj, lat_factor) {
         .$trip_id
       # get route with all stops
       set_of_stops_in_active_trip_ids <- 
-        gtfs_obj$stop_times_df  %>% 
+        gtfs_today$today_stop_times %>% 
         filter(trip_id %in% trip_ids_now) %>% 
-        inner_join(gtfs_obj$stops_df, by = "stop_id") %>% 
+        inner_join(gtfs_today$stops, by = "stop_id") %>% 
         select(stop_lat, stop_lon, stop_id, stop_sequence, trip_id, departure_time)
       
       # set up the possible combinations of distances for trip id and bus gps points
