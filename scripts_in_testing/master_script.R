@@ -7,7 +7,10 @@ tidy_gps_obj <- data.frame(lat =   c(61.167986,    61.131665,    61.213679,   61
                            direction =  c(1,1,0,0),
                            datetime = ymd_hms(Sys.time()))
 
-my_daily_gtfs <- daily_gtfs_obj(today = structure(17242, class = "Date"))
+tidy_gps_obj <- get_tidy_gps()
+
+#my_daily_gtfs <- daily_gtfs_obj(today = structure(17242, class = "Date"))
+my_daily_gtfs <- daily_gtfs_obj(today = Sys.Date())
 gtfs_obj <- import_gtfs("https://transitfeeds.com/link?u=http://gtfs.muni.org/People_Mover.gtfs.zip")
 
 d <- calculate_delays(my_gps_data = tidy_gps_obj,

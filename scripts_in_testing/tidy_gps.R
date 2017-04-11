@@ -1,6 +1,6 @@
 library(XML)
 
-tidy_gps() <- function() {
+get_tidy_gps <- function() {
   xml_list <- xmlToList(xmlParse("http://bustracker.muni.org/InfoPoint/XML/vehiclelocation.xml"))
   list_length <- length(xml_list) 
   bus_route <- c()
@@ -17,9 +17,11 @@ tidy_gps() <- function() {
     bus_route      <- c(bus_route, bus_route_piece)
     bus_direction  <- c(bus_direction, bus_dir_piece)
   }
-  tidy_gps <- data.frame(bus_latitude, bus_longitude, bus_route) %>% filter(!bus_route %in% c("0", "99", "O"))
-  tidy_gps %>% mutate(bus_direction = bus_direction)
+  tidy_gps <- data.frame(lat = bus_latitude, lon = bus_longitude, route = bus_route) %>% filter(!bus_route %in% c("0"))
+  tidy_gps <- tidy_gps %>% mutate(direction = bus_direction) %>% filter(route != "99")
+  tidy_gps$direction[tidy_gps$direction == "I"] <- "1"
+  tidy_gps$direction[tidy_gps$direction == "O"] <- "0"
+  tidy_gps$direction <- as.numeric(tidy_gps$direction)
+  tidy_gps %>% filter(!is.na(direction)) %>% mutate(datetime = Sys.time(), lat = as.numeric(as.character(lat)), lon = as.numeric(as.character(lon)))
 }
-
-
 

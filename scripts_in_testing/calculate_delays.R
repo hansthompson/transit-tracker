@@ -33,13 +33,13 @@ calculate_delays <- function(my_gps_data, gtfs_today, gtfs_obj, lat_factor) {
         select(stop_lat, stop_lon, stop_id, stop_sequence, trip_id, departure_time)
       
       # set up the possible combinations of distances for trip id and bus gps points
-      gtfs_gps_join_prep 	<- set_of_stops_in_active_trip_ids[rep(1:nrow(set_of_stops_in_active_trip_ids), n_trips),] # duplicate the dataframe
-      gps_data_new 		<- gps_data[rep(1:nrow(gps_data), n_trips),] 
-      gtfs_gps_join_prep$primary_id 	<- paste(gtfs_gps_join_prep$trip_id, # add the key for the combination 
+      gtfs_gps_join_prep  <- set_of_stops_in_active_trip_ids[rep(1:nrow(set_of_stops_in_active_trip_ids), n_trips),] # duplicate the dataframe
+      gps_data_new    <- gps_data[rep(1:nrow(gps_data), n_trips),] 
+      gtfs_gps_join_prep$primary_id   <- paste(gtfs_gps_join_prep$trip_id, # add the key for the combination 
                                               rep(1:n_trips, each=nrow(set_of_stops_in_active_trip_ids)), sep="-") 
-      gps_data_new$primary_id 		<- paste(trip_ids_now, 
+      gps_data_new$primary_id     <- paste(trip_ids_now, 
                                          rep(1:n_trips, each=nrow(gps_data)), sep = "-")
-      gps_data_new$trip_id 		<- paste(trip_ids_now)
+      gps_data_new$trip_id    <- paste(trip_ids_now)
       
       # combine gps and gtfs tables
       calc_trip_id_table <- inner_join(gtfs_gps_join_prep, gps_data_new %>% select(-trip_id), by = "primary_id") %>%
