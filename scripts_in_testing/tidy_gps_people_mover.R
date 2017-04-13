@@ -1,6 +1,4 @@
-library(XML)
-
-get_tidy_gps <- function() {
+tidy_gps_people_mover <- function() {
   xml_list <- xmlToList(xmlParse("http://bustracker.muni.org/InfoPoint/XML/vehiclelocation.xml"))
   list_length <- length(xml_list) 
   bus_route <- c()
@@ -24,4 +22,3 @@ get_tidy_gps <- function() {
   tidy_gps$direction <- as.numeric(tidy_gps$direction)
   tidy_gps %>% filter(!is.na(direction)) %>% mutate(datetime = Sys.time(), lat = as.numeric(as.character(lat)), lon = as.numeric(as.character(lon)))
 }
-
