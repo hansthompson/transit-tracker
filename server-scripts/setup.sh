@@ -7,5 +7,5 @@ sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.us.r-projec
 sudo su - -c "R -e \"install.packages('XML', repos='http://cran.us.r-project.org')\""
 sudo su - -c "R -e \" library(devtools);install_github('ropensci/gtfsr')  \""
 sudo su - -c "R -e \" library(devtools);install_github('hansthompson/dlayr')  \""
-(crontab -l 2>/dev/null; echo "5 0 * * * Rscript /root/transit-tracker/server_scripts/download_gtfs.R ") | crontab -
-(crontab -l 2>/dev/null; echo "* * * * * Rscript /root/transit-tracker/server_scripts/get_tidy_gps.R ") | crontab -
+(crontab -l 2>/dev/null; echo "5 0 * * * Rscript /root/transit-tracker/scripts_in_testing/download_gtfs.R ") | crontab -
+(crontab -l 2>/dev/null; echo "* * * * * Rscript /root/transit-tracker/scripts_in_testing/get_tidy_gps.R ") | crontab -
