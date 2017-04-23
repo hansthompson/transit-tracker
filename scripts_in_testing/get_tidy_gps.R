@@ -1,0 +1,6 @@
+library(XML);library(dlayr);library(dplyr)
+library(lubridate);library(tidyr);library(gtfsr)
+source("/root/transit-tracker/scripts_in_testing/tidy_gps_people_mover.R")
+tidy_gps_obj <- tidy_gps_people_mover()
+save(tidy_gps_obj, file = "tidy_gps_obj.rda")
+
