@@ -11,3 +11,4 @@ sudo su - -c "R -e \" library(devtools);install_github('hansthompson/dlayr')  \"
 (crontab -l 2>/dev/null; echo "* * * * * Rscript /root/transit-tracker/scripts_in_testing/get_tidy_gps.R ") | crontab -
 sudo apt-get install gdebi-core
 sudo gdebi -n shiny-server-1.5.3.838-amd64.deb 
+# change config to forward port 80
