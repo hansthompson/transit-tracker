@@ -1,4 +1,5 @@
 library(XML);library(dlayr);library(dplyr)
 library(lubridate);library(tidyr);library(gtfsr)
-my_daily_gtfs <- daily_gtfs_obj(url = "https://transitfeeds.com/link?u=http://gtfs.muni.org/People_Mover.gtfs.zip")
-save(my_daily_gtfs, file = "my_daily_gtfs.rda")
+source("/root/transit-tracker/scripts_in_testing/tidy_gps_people_mover.R")
+tidy_gps_obj <- tidy_gps_people_mover()
+save(tidy_gps_obj, file = "/root/tidy_gps_obj.rda")
