@@ -12,5 +12,5 @@ sudo su - -c "R -e \" library(devtools);install_github('hansthompson/dlayr')  \"
 (crontab -l 2>/dev/null; echo "* * * * * Rscript /root/transit-tracker/scripts_in_testing/get_tidy_gps.R ") | crontab -
 wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
 sudo gdebi -n shiny-server-1.5.3.838-amd64.deb 
-sudo sed -i 's/  listen 80;/  listen 3838;/' /etc/shiny-server/shiny-server.conf
+sudo sed -i 's/  listen 3838;/  listen 80;/' /etc/shiny-server/shiny-server.conf
 # then reboot
