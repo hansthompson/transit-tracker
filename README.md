@@ -46,7 +46,14 @@ How to contribute
 
 Please make an issue and I'll respond.  We can decide to go with the master or a feature branch. 
 
+To Do:
+-------------
 
+1. figure out how to run /server-scripts/setup.sh from bash for instant deployment
+2. set up a system for storing tidy_gps functions for each agency (perhaps a seperate repo).
+3. have the scripts run either on startup or through crontab. 
+4. have the scripts write to the right shiny server app directory/s. 
+5. Set up a script to benchmark the gps feed. 
 
 
 
