@@ -13,3 +13,4 @@ sudo su - -c "R -e \" library(devtools);install_github('hansthompson/dlayr')  \"
 wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.5.3.838-amd64.deb
 sudo gdebi -n shiny-server-1.5.3.838-amd64.deb 
 sudo sed -i 's/  listen 80;/  listen 3838;/' /etc/shiny-server/shiny-server.conf
+# then reboot
