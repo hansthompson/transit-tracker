@@ -22,7 +22,9 @@ How to Deploy
 1. Run the script for turning the gps into an API 
 
  git clone https://www.github.com/hansthompson/transit-tracker
+ 
  chmod +x transit-tracker/server-scripts/setup.sh
+ 
  ./transit-tracker/server-scripts/setup.sh
 
 
