@@ -2,7 +2,7 @@ sudo apt-get -y install nginx git libcurl4-gnutls-dev libxml2-dev libssl-dev
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
 sudo apt-get update
-sudo timedatectl set-timezone America/Anchorage
+sudo timedatectl set-timezone America/Anchorage # needs to change based on the agency location.
 sudo apt-get -y install r-base r-base-dev gdebi-core
 sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.us.r-project.org')\""
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.us.r-project.org')\""
