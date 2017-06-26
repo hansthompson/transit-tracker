@@ -16,4 +16,5 @@ git clone https://www.github.com/hansthompson/dlayr-maps /srv/shiny-server/dlayr
 sudo systemctl restart shiny-server
 (crontab -l 2>/dev/null; echo "5 0 * * * Rscript $HOME/transit-tracker/scripts_in_testing/download_gtfs.R ") | crontab -
 (crontab -l 2>/dev/null; echo "* * * * * Rscript $HOME/transit-tracker/scripts_in_testing/get_tidy_gps.R ") | crontab -
-
+#echo <<gtfs_link>> > $HOME/gtfs_url.txt
+#echo <<gps_function>> > $HOME/gps_function_url.txt
